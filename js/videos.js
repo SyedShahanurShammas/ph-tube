@@ -58,19 +58,36 @@ const displayVideos = (items) => {
   items.forEach((item) => {
     console.log(item);
     const card = document.createElement("div");
-    card.classList = "card bg-base-100 shadow-sm";
+    card.classList = "card bg-base-100 ";
     card.innerHTML = `
-     <figure>
-    <img
+     <figure ">
+    <img  class="h-[200px] w-[100%] object-cover"
       src="${item.thumbnail}"
       alt="Shoes" />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">Card Title</h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
+  <div class="px-0 py-3 flex items-start gap-3 ">
+     <figure>
+        <img class="h-10 w-10 rounded-full object-cover" src="${
+          item.authors[0].profile_picture
+        }" alt="">
+      </figure>
+      <div>
+        <h1 class="font-bold text-xl mb-2.5 ">${item.title}</h1>
+         <div class="flex gap-2 items-center">
+          <p class="mb-2.5 text-gray-400">${item.authors[0].profile_name}  
+          </p>
+         <span>
+          ${
+            item.authors[0].verified === true
+              ? `
+              <img class="w-5" src="https://img.icons8.com/?size=96&id=SRJUuaAShjVD&format=png" />`
+              : " "
+          }
+         </span>
+       </div>
+
+        <p></p>
+      </div>
   </div>
     `;
     videosContainer.appendChild(card);
