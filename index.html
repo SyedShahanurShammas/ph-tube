@@ -20,10 +20,43 @@
   </head>
   <body>
     <header>
-      <h1>shawon</h1>
-      <h5>shawon</h5>
+      <nav
+        class="flex w-11/12 mx-auto justify-between items-center py-3 border-b-2 border-gray-400"
+      >
+        <div class="w-[100px]"><img src="./resources/Logo.png" alt="" /></div>
+        <div class="search">
+          <label class="input">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" required placeholder="Search" />
+          </label>
+        </div>
+        <div class="sort">
+          <button class="btn">SORT</button>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <nav id="buttons-category" class="flex justify-center my-9"></nav>
+    <main>
+      <section
+        id="videos_container"
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"
+      ></section>
+    </main>
     <footer></footer>
     <script src="./js/videos.js"></script>
   </body>
